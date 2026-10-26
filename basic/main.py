@@ -4,7 +4,10 @@ def is_even(number):
     :param number:
     :return:
     """
-    pass
+    if number % 2==0:
+        return True
+    else:
+        return False
 
 
 def count_vowels(text):
@@ -14,7 +17,11 @@ def count_vowels(text):
     :param text:
     :return:
     """
-    pass
+    vowels = 0
+    for letter in text.lower():
+        if letter in "aeiou":
+            vowels += 1
+    return vowels
 
 
 def celsius_to_fahrenheit(celsius):
@@ -23,7 +30,8 @@ def celsius_to_fahrenheit(celsius):
     :param celsius:
     :return:
     """
-    pass
+    fahrenheit = (celsius * 1.8) + 32
+    return fahrenheit
 
 
 def reverse_text(text):
@@ -35,7 +43,8 @@ def reverse_text(text):
     :param text:
     :return:
     """
-    pass
+    return text[::-1]
+
 
 
 def larger_number(a, b):
@@ -46,7 +55,7 @@ def larger_number(a, b):
     :param b:
     :return:
     """
-    pass
+    return a if a > b else b if a < b else a
 
 
 def average_two(a, b):
@@ -56,7 +65,8 @@ def average_two(a, b):
     :param b:
     :return:
     """
-    pass
+    average = (a + b) / 2
+    return average
 
 
 def can_afford(balance, cost):
@@ -67,7 +77,10 @@ def can_afford(balance, cost):
     :param cost:
     :return:
     """
-    pass
+    if balance >= cost:
+        return True
+    else:
+        return False
 
 
 def repeat_text(text, times):
@@ -81,7 +94,7 @@ def repeat_text(text, times):
     :param times:
     :return:
     """
-    pass
+    return text * times
 
 
 def contains_word(sentence, word):
@@ -92,7 +105,10 @@ def contains_word(sentence, word):
     :param word:
     :return:
     """
-    pass
+    if word in sentence:
+        return True
+    else:
+        return False
 
 
 def calculate_tip(cost, percent):
@@ -105,7 +121,8 @@ def calculate_tip(cost, percent):
     :param percent:
     :return:
     """
-    pass
+    return cost * (percent / 100)
+
 
 
 def make_initials(first_name, last_name):
@@ -118,7 +135,8 @@ def make_initials(first_name, last_name):
     :param last_name:
     :return:
     """
-    pass
+    initials =  first_name[0].upper() + last_name[0].upper()
+    return initials
 
 
 def percent_score(points, possible):
@@ -132,7 +150,9 @@ def percent_score(points, possible):
     :param possible:
     :return:
     """
-    pass
+    if possible < 1:
+        return None
+    return points / possible * 100
 
 
 def is_between(number, minimum, maximum):
@@ -144,7 +164,12 @@ def is_between(number, minimum, maximum):
     :param maximum:
     :return:
     """
-    pass
+    if number < minimum:
+        return False
+    elif number > maximum:
+        return False
+    else:
+        return True
 
 
 def all_different(a, b, c):
@@ -157,7 +182,7 @@ def all_different(a, b, c):
     :param c:
     :return:
     """
-    pass
+    return a != b and b != c and a != c
 
 
 def average_three(a, b, c):
@@ -168,7 +193,8 @@ def average_three(a, b, c):
     :param c:
     :return:
     """
-    pass
+    average3 = (a + b + c) / 3
+    return average3
 
 
 def describe_temperature(temperature, cold_limit, hot_limit):
@@ -182,7 +208,13 @@ def describe_temperature(temperature, cold_limit, hot_limit):
     :param hot_limit:
     :return:
     """
-    pass
+    if temperature < cold_limit:
+        return "cold"
+    elif temperature > hot_limit:
+        return "hot"
+    else:
+        return "comfortable"
+
 
 if __name__ == "__main__":
     """
